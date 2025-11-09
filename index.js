@@ -17,3 +17,15 @@ var favHobby = rs.question(userName + ', what is your favorite hobby? ')
 var hobbies = [];
 hobbies.push(favHobby);
 console.log(hobbies);
+// Ask user if they have any more hobbies
+var moreHobbies = rs.questionInt('How many other hobbies do you have, ' + userName + '? ');
+console.log(moreHobbies);
+// Ask question of other hobbies and push response to hobbies
+if (moreHobbies > 0) {
+  var counter = 0;
+  while (counter < moreHobbies) {
+    var input = rs.prompt();
+    hobbies.push(input);
+    counter++;
+  }
+};
