@@ -9,5 +9,11 @@ var rs = require('readline-sync');
 
 
 // Prompt for users name
-var userName = rs.question('Hi there, what is your name?');
+var userName = rs.question('Hi there, what is your name? ');
 console.log('Hello, ' + userName + '. It is very nice to meet you!');
+// Prompts for users favorite hobby
+var favHobby = rs.question(userName + ', what is your favorite hobby? ')
+// Add hobbies to a list
+var hobbies = [];
+hobbies.push(favHobby);
+console.log(hobbies);
