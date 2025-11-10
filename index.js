@@ -7,17 +7,20 @@ var rs = require('readline-sync');
 // Store a list of the users hobbies
 // Print all hobbies from list at the end
 
+var hobbies = [];
+var areYouSure = false;
+var moreHobbies = 0;
+
+function getHobbyCount() {
+  moreHobbies = rs.questionInt('How many other hobbies do you have? ')
+};
 
 // Prompt for users name
 var userName = rs.question('Hi there, what is your name? ');
 console.log('Hello, ' + userName + '. It is very nice to meet you!');
 // Prompts for users favorite hobby
 var favHobby = rs.question(userName + ', what is your favorite hobby? ')
-// Add hobbies to a list
-var hobbies = [];
-hobbies.push(favHobby);
-// Ask user if they have any more hobbies
-var moreHobbies = rs.questionInt('How many other hobbies do you have, ' + userName + '? ');
+
 // Ask question of other hobbies and push response to hobbies
 if (moreHobbies > 0) {
   var counter = 0;
